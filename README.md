@@ -1,0 +1,1 @@
+Some exercises(web pages) for traing CSS3, HTML5 and JavaScript.
