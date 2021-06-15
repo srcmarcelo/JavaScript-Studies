@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Fines system.</h1>
+    Car's speed: <input type="number" name="spd" id="txtspd"> Km/h
+    <input type="button" value="Verify" onclick="Calculate()">
+    <div id="res"></div>
+    <script>
+        function Calculate() {
+            var txts = document.getElementById('txtspd')
+            var res = document.getElementById('res')
+            var spd = Number(txts.value)
+            res.innerHTML = `<p>Your current speed is <strong>${spd}Km/h</strong>.</p>`
+            if (spd > 60) {
+                res.innerHTML += `<p>You were <strong>FINED</strong> for speeding.`
+            }
+            res.innerHTML += `<p>Always use seat belt when driving.</p>`
+        }
+    </script>
+</body>
+</html>

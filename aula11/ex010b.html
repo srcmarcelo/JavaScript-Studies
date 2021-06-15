@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nationality</title>
+</head>
+<body>
+    <h1>Where are you from?</h1>
+    <input type="text" name="cou" id="txtcou">
+    <input type="button" value="OK" onclick="Analyze()">
+    <div id="ans"></div>
+    <script>
+        function Analyze() {
+            var txts = document.getElementById('txtcou')
+            var ans = document.getElementById('ans')
+            var cou = txts.value
+            if (cou != 'Brazil' && cou != 'Brasil') {
+                ans.innerHTML = '<p>So you are a Foreigner.</p>'
+            } else {
+                ans.innerHTML = '<p>So you are Brazilian.</p>'
+            }
+        }
+    </script>
+</body>
+</html>
